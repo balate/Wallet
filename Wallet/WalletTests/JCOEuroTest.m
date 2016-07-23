@@ -10,6 +10,7 @@
 
 #import <XCTest/XCTest.h>
 #import "JCOEuro.h"
+#import "JCOMoney.h"
 
 @interface JCOEuroTest : XCTestCase
 
@@ -20,8 +21,8 @@
 -(void)testMultiplication{
 
  
-    JCOEuro *euro = [[JCOEuro alloc] initWithAmount:5];
-    JCOEuro *ten = [[JCOEuro alloc] initWithAmount:10];
+    JCOEuro *euro = [JCOMoney euroWithAmount:5];
+    JCOEuro *ten = [JCOMoney euroWithAmount:10];
     JCOEuro *total = [euro times:2];
     
     
@@ -30,8 +31,8 @@
 
 -(void) testEquality {
 
-    JCOEuro *five = [[JCOEuro alloc] initWithAmount:5];
-    JCOEuro *ten = [[JCOEuro alloc] initWithAmount:10];
+    JCOEuro *five = [JCOMoney euroWithAmount:5];
+    JCOEuro *ten = [JCOMoney euroWithAmount:10];
     JCOEuro *total = [five times:2];
     
     
@@ -43,8 +44,8 @@
 
 -(void) testHash {
 
-    JCOEuro *a = [[JCOEuro alloc]initWithAmount:2];
-    JCOEuro *b = [[JCOEuro alloc]initWithAmount:2];
+    JCOEuro *a = [JCOMoney euroWithAmount:2];
+    JCOEuro *b = [JCOMoney euroWithAmount:2];
     
     XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
     
@@ -53,7 +54,7 @@
 
 -(void) testAmountStorage{
 
-    JCOEuro *euro = [[JCOEuro alloc] initWithAmount:2];
+    JCOEuro *euro = [JCOMoney euroWithAmount:2];
     
    
 #pragma clang diagnostic push

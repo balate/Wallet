@@ -10,6 +10,9 @@
 
 @interface JCOMoney : NSObject
 
++(id) euroWithAmount:(NSInteger) amount;
++(id) dollarWithAmount:(NSInteger) amount;
+
 - (id) initWithAmount:(NSInteger) amount;
 
 -(JCOMoney *) times:(NSInteger) multiplier;

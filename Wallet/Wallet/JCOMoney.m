@@ -9,10 +9,24 @@
 #import "JCOMoney.h"
 #import "NSObject+GNUStepAddons.h"
 #import "JCOMoney-Private.h"
+#import "JCOEuro.h"
+#import "JCODollar.h"
 
 
 
 @implementation JCOMoney
+
++(id) euroWithAmount:(NSInteger) amount{
+    
+    return [[JCOEuro alloc] initWithAmount:amount];
+
+}
+
++(id) dollarWithAmount:(NSInteger) amount{
+    
+    return [[JCODollar alloc] initWithAmount:amount];
+
+}
 
 - (id)initWithAmount:(NSInteger) amount{
 

@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "JCODollar.h"
+#import "JCOMoney.h"
 
 @interface JCODollarTest : XCTestCase
 
@@ -17,18 +18,18 @@
 
 -(void) testMultiplacation{
 
-    JCODollar *five = [[JCODollar alloc] initWithAmount : 5];
+    JCODollar *five = [JCOMoney dollarWithAmount:5 ];
     JCODollar *total = [five times: 2];
-    JCODollar *ten = [[JCODollar alloc] initWithAmount : 10];
+    JCODollar *ten = [JCOMoney dollarWithAmount:10];
     
     XCTAssertEqualObjects(ten, total, @"$5 *2 = 10$");
 }
 
 -(void) testEquality{
     
-    JCODollar *five =[[JCODollar alloc]initWithAmount:5];
+    JCODollar *five =[JCOMoney dollarWithAmount:5];
     JCODollar *total = [five times: 2];
-    JCODollar *ten = [[JCODollar alloc] initWithAmount : 10];
+    JCODollar *ten = [JCOMoney dollarWithAmount:10];
     
     XCTAssertEqualObjects(ten, total, @"$5 *2 = 10$");
     XCTAssertFalse([total isEqual:five] , @"Non equivalent objects should not be equal");
@@ -39,8 +40,8 @@
 
 -(void) testHash {
     
-    JCODollar *a = [[JCODollar alloc]initWithAmount:2];
-    JCODollar *b = [[JCODollar alloc]initWithAmount:2];
+    JCODollar *a = [JCOMoney dollarWithAmount:2];
+    JCODollar *b = [JCOMoney dollarWithAmount:2];
     
     XCTAssertEqual([a hash], [b hash], @"Equal objects must have same hash");
     
@@ -49,7 +50,7 @@
 
 -(void) testAmountStorage{
     
-   JCODollar *dollar = [[JCODollar alloc] initWithAmount:2];
+   JCODollar *dollar = [JCOMoney dollarWithAmount:2];
 
     
     
