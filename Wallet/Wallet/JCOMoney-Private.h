@@ -10,6 +10,7 @@
 #import "JCOMoney.h"
 
 @interface JCOMoney ()
+
 @property (nonatomic, strong) NSNumber *amount;
-//@property (nonatomic) NSInteger *amount;
+
 @end
