@@ -25,7 +25,7 @@
     return self;
 }
 
--(JCOMoney *) reduce:(JCOMoney*) money
+-(id<JCOMoney>) reduce:(JCOMoney*) money
           toCurrency:(NSString *) currency{
    
     JCOMoney *result;

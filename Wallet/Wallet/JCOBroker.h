@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-@class JCOMoney;
+#import "JCOMoney.h"
 
 
 @interface JCOBroker : NSObject
 
--(JCOMoney *) reduce:(JCOMoney*) money toCurrency:(NSString *) currency;
+-(id<JCOMoney>) reduce:(JCOMoney*) money toCurrency:(NSString *) currency;
 
 -(void) addRate:(NSInteger) rate
    fromCurrency:(NSString*) fromCurrency

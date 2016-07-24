@@ -41,7 +41,7 @@
     return self;
 }
 
--(id)times:(NSInteger) multiplier{
+-(id<JCOMoney>)times:(NSInteger) multiplier{
     
  
         
@@ -49,11 +49,17 @@
         
         return newMoney;
     
-    
-    
-
-    
 }
+
+-(id<JCOMoney>) plus:(JCOMoney *) other{
+    
+    NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
+    JCOMoney *total = [[JCOMoney alloc] initWithAmount:totalAmount currency:self.currency];
+    
+    
+    return total;
+}
+
 
 
 #pragma mark - Overwritten
@@ -82,14 +88,7 @@
 }
 
 
--(JCOMoney *) plus: (JCOMoney *) other{
 
-    NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
-    JCOMoney *total = [[JCOMoney alloc] initWithAmount:totalAmount currency:self.currency];
-    
-    
-    return total;
-}
 
 @end
 

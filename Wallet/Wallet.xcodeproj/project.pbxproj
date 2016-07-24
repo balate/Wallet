@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		142B22B71D4539A600469729 /* JCOWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22B61D4539A600469729 /* JCOWalletTests.m */; };
+		142B22BA1D453D1100469729 /* JCOWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22B91D453D1100469729 /* JCOWallet.m */; };
+		142B22BB1D453D1100469729 /* JCOWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22B91D453D1100469729 /* JCOWallet.m */; };
 		14654AE51D44D26F00D8FC5D /* JCOBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14654AE41D44D26F00D8FC5D /* JCOBrokerTests.m */; };
 		14654AE81D44D6E700D8FC5D /* JCOBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 14654AE71D44D6E700D8FC5D /* JCOBroker.m */; };
 		14654AE91D44D6E700D8FC5D /* JCOBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 14654AE71D44D6E700D8FC5D /* JCOBroker.m */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		142B22B61D4539A600469729 /* JCOWalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCOWalletTests.m; sourceTree = "<group>"; };
+		142B22B81D453D1100469729 /* JCOWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCOWallet.h; sourceTree = "<group>"; };
+		142B22B91D453D1100469729 /* JCOWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCOWallet.m; sourceTree = "<group>"; };
 		14654AE11D43EA1A00D8FC5D /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14654AE21D43EA1A00D8FC5D /* WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14654AE31D43EA1A00D8FC5D /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +156,8 @@
 				14D8918A1D412DEF005E3584 /* JCOMoney.m */,
 				14654AE61D44D6E700D8FC5D /* JCOBroker.h */,
 				14654AE71D44D6E700D8FC5D /* JCOBroker.m */,
+				142B22B81D453D1100469729 /* JCOWallet.h */,
+				142B22B91D453D1100469729 /* JCOWallet.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -301,6 +307,7 @@
 				147A8B761D395A9D00F2B6D1 /* ViewController.m in Sources */,
 				14654AE81D44D6E700D8FC5D /* JCOBroker.m in Sources */,
 				147A8B731D395A9D00F2B6D1 /* AppDelegate.m in Sources */,
+				142B22BA1D453D1100469729 /* JCOWallet.m in Sources */,
 				14D8918F1D413347005E3584 /* NSObject+GNUStepAddons.m in Sources */,
 				14D8918B1D412DEF005E3584 /* JCOMoney.m in Sources */,
 				147A8B701D395A9D00F2B6D1 /* main.m in Sources */,
@@ -319,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14D891BD1D43DD91005E3584 /* JCOMoneyTest.m in Sources */,
+				142B22BB1D453D1100469729 /* JCOWallet.m in Sources */,
 				14654AE91D44D6E700D8FC5D /* JCOBroker.m in Sources */,
 				14654AE51D44D26F00D8FC5D /* JCOBrokerTests.m in Sources */,
 				142B22B71D4539A600469729 /* JCOWalletTests.m in Sources */,
