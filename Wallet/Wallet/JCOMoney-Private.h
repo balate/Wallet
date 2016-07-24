@@ -9,8 +9,4 @@
 #import <Foundation/Foundation.h>
 #import "JCOMoney.h"
 
-@interface JCOMoney ()
 
-@property (nonatomic, strong) NSNumber *amount;
-
-@end

@@ -8,11 +8,13 @@
 
 #import "JCOMoney.h"
 #import "NSObject+GNUStepAddons.h"
-#import "JCOMoney-Private.h"
-#import "JCOEuro.h"
-#import "JCODollar.h"
 
 
+
+
+@interface JCOMoney ()
+@property (nonatomic, strong) NSNumber *amount;
+@end
 
 @implementation JCOMoney
 
