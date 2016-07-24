@@ -18,20 +18,21 @@
 
 +(id) euroWithAmount:(NSInteger) amount{
     
-    return [[JCOEuro alloc] initWithAmount:amount];
+    return [[JCOMoney alloc] initWithAmount:amount currency:@"EUR"];
 
 }
 
 +(id) dollarWithAmount:(NSInteger) amount{
     
-    return [[JCODollar alloc] initWithAmount:amount];
+    return [[JCOMoney alloc] initWithAmount:amount currency:@"USD"];
 
 }
 
-- (id)initWithAmount:(NSInteger) amount{
+- (id)initWithAmount:(NSInteger) amount currency:(NSString *)currency{
 
     if (self = [super init]) {
         _amount = @(amount);
+        _currency = currency;
          //_amount = amount;
     }
     
@@ -42,7 +43,7 @@
     
  
         
-        JCOMoney *newMoney = [[JCOMoney alloc]initWithAmount:[self.amount integerValue] * multiplier];
+        JCOMoney *newMoney = [[JCOMoney alloc]initWithAmount:[self.amount integerValue] * multiplier currency:self.currency];
         
         return newMoney;
     

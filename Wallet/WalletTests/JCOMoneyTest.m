@@ -16,5 +16,17 @@
 @implementation JCOMoneyTest
 
 
+-(void) testCurrencies {
+
+
+    XCTAssertEqualObjects(@"EUR", [[JCOMoney euroWithAmount:1] currency], @"The currency of euros should be EUR");
+  
+    XCTAssertEqualObjects(@"USD", [[JCOMoney dollarWithAmount:1] currency], @"The currency of $1 should be USD");
+    
+    
+}
+
+
+
 
 @end
