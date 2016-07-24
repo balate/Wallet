@@ -104,5 +104,24 @@
 }
 
 
+-(void) testThatHashIsAmount{
+
+
+    JCOMoney *one = [JCOMoney dollarWithAmount:1];
+    
+    XCTAssertEqual([one hash], 1, @"The hash must be the same as the amount");
+    
+}
+
+-(void) testDesscription{
+
+    JCOMoney *one = [JCOMoney dollarWithAmount:1];
+    NSString *desc = @"<JCOMoney: $1";
+    
+    XCTAssertEqualObjects(desc, [one description], @"Description match template");
+    
+
+}
+
 
 @end
