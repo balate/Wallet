@@ -94,8 +94,14 @@
 }
 
 
-
-
+-(void) testSimpleAddinction{
+    
+    XCTAssertEqualObjects([[JCOMoney dollarWithAmount:5]
+                           plus:[JCOMoney dollarWithAmount:5]],
+                           [JCOMoney dollarWithAmount:10],
+                           @"$5+$5 =10");
+    
+}
 
 
 

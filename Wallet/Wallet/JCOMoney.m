@@ -81,5 +81,15 @@
         return NO;
 }
 
+
+-(JCOMoney *) plus: (JCOMoney *) other{
+
+    NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
+    JCOMoney *total = [[JCOMoney alloc] initWithAmount:totalAmount currency:self.currency];
+    
+    
+    return total;
+}
+
 @end
 

@@ -20,4 +20,6 @@
 
 -(id) times:(NSInteger) multiplier;
 
+-(JCOMoney *) plus: (JCOMoney *) other;
+
 @end
