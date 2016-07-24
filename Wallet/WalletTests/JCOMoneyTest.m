@@ -54,6 +54,16 @@
 }
 
 
+-(void) testDiferentCurrencies{
+
+
+    JCOMoney *euro = [JCOMoney euroWithAmount:1];
+    JCOMoney *dollar = [JCOMoney dollarWithAmount:1];
+    
+    
+    XCTAssertNotEqualObjects(euro, dollar, @"Diferent currencies should not be equeal!");
+
+}
 
 -(void) testHash {
     
