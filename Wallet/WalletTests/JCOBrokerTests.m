@@ -37,4 +37,22 @@
     XCTAssertEqualObjects(sum, reduced, @"Conversion to same currency should be a NO");
 }
 
+//$10 == €5 2:1
+-(void) testReduction{
+    
+    JCOBroker *broker = [JCOBroker new];
+    [broker addRate:2 fromCurrency:@"USD" toCurrency:@"EUR"];
+    
+    JCOMoney *dollars = [JCOMoney dollarWithAmount:10];
+    JCOMoney *euros = [JCOMoney euroWithAmount:5];
+    
+    JCOMoney *converted = [broker reduce:dollars toCurrency:@"EUR"];
+    
+    XCTAssertEqualObjects(converted, euros, @"$10 == 5€ 2:1");
+
+}
+
+
+
+
 @end

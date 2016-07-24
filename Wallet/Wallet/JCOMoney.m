@@ -35,7 +35,7 @@
     if (self = [super init]) {
         _amount = @(amount);
         _currency = currency;
-         //_amount = amount;
+       
     }
     
     return self;
