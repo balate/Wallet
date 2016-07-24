@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface JCOMoney : NSObject
-
+@property (nonatomic, strong,readonly) NSNumber *amount;
 @property (nonatomic,readonly) NSString *currency;
 
 +(id) euroWithAmount:(NSInteger) amount;

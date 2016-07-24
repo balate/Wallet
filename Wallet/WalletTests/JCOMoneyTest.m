@@ -116,7 +116,7 @@
 -(void) testDesscription{
 
     JCOMoney *one = [JCOMoney dollarWithAmount:1];
-    NSString *desc = @"<JCOMoney: $1";
+    NSString *desc = @"<JCOMoney: USD 1>";
     
     XCTAssertEqualObjects(desc, [one description], @"Description match template");
     

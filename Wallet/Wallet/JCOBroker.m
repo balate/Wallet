@@ -25,17 +25,53 @@
     return self;
 }
 
--(JCOMoney *) reduce:(JCOMoney*)
-    money toCurrency:(NSString *) currency{
+-(JCOMoney *) reduce:(JCOMoney*) money
+          toCurrency:(NSString *) currency{
+   
+    JCOMoney *result;
+    double rate = [[self.rates objectForKey:[self keyForCurrency:money.currency toCurrency:currency]]doubleValue];
     
-    return money;
+    //comprobamos que divisa origen y destino son las mismas
+    if ([money.currency isEqual:currency]){
+    
+        result = money;
+    }else if (rate == 0 ){
+        // No hay tasa de conversion, salta exception!!
+        [NSException raise:@"NoConversionRateException"
+                    format:@"Must have a conversion from %@ to %@", money.currency, currency];
+
+    
+    }else {
+    
+        // Tenemos conversión
+        double rate = [[self.rates objectForKey:[self keyForCurrency:money.currency
+                                                          toCurrency:currency]] doubleValue];
+        
+        NSInteger  newAmount = [money.amount integerValue] *rate;
+        
+        result = [[JCOMoney alloc]
+                  initWithAmount:newAmount
+                        currency:currency];
+        
+        
+    }
+    return result;
+    
+
+    
 }
 
 -(void) addRate:(NSInteger) rate
    fromCurrency:(NSString*) fromCurrency
      toCurrency:(NSString*) toCurrency{
     
-    [self.rates setObject:@(rate) forKey:[self keyForCurrency: fromCurrency toCurrency: toCurrency]];
+    [self.rates setObject:@(rate)
+                   forKey:[self keyForCurrency: fromCurrency
+                                    toCurrency: toCurrency]];
+    
+    [self.rates setObject:@(1.0/rate)
+                   forKey:[self keyForCurrency: toCurrency
+                                    toCurrency: fromCurrency]];
 
 }
 
