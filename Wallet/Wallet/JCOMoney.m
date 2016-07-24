@@ -38,10 +38,18 @@
     return self;
 }
 
--(JCOMoney *)times:(NSInteger) multiplier{
+-(id)times:(NSInteger) multiplier{
     
-    //no se deberia de llamar, sino que se debería de usar la subclase
-    return [self subclassResponsibility:_cmd];
+ 
+        
+        JCOMoney *newMoney = [[JCOMoney alloc]initWithAmount:[self.amount integerValue] * multiplier];
+        
+        return newMoney;
+    
+    
+    
+
+    
 }
 
 

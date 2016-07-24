@@ -11,6 +11,5 @@
 
 @interface JCOEuro : JCOMoney
 
--(JCOEuro*) times:(NSInteger) multiplier;
 
 @end

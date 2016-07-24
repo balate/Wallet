@@ -12,12 +12,6 @@
 @implementation JCOEuro
 
 
--(JCOEuro*) times:(NSInteger) multiplier{
-
-    JCOEuro *newEuro = [[JCOEuro alloc]initWithAmount:[self.amount integerValue] * multiplier];
-    
-    return newEuro;
-}
 
 
 @end

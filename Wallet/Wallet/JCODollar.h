@@ -11,7 +11,7 @@
 
 @interface JCODollar : JCOMoney
 
--(JCODollar*) times:(NSInteger) multiplier;
+
 
 @end
 

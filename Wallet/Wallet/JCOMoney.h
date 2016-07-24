@@ -15,6 +15,6 @@
 
 - (id) initWithAmount:(NSInteger) amount;
 
--(JCOMoney *) times:(NSInteger) multiplier;
+-(id) times:(NSInteger) multiplier;
 
 @end

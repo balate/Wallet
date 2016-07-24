@@ -16,13 +16,5 @@
 @implementation JCOMoneyTest
 
 
--(void) testThatTimesRasisesException{
-
-  //  JCOMoney *money = [[JCOMoney alloc] initWhitAmount :1];
-    JCOMoney *money = [[JCOMoney alloc]initWithAmount:1];
-    
-    XCTAssertThrows([money times:2], @"Should raise an exception");
-    
-}
 
 @end

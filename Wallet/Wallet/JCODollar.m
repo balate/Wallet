@@ -12,14 +12,4 @@
 
 
 
--(JCODollar*) times:(NSInteger) multiplier{
-    
-    JCODollar *newDollar = [[JCODollar alloc]initWithAmount:[self.amount integerValue] * multiplier];
-    
-    return newDollar;
-}
-
-
-
-
 @end
