@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142B22B71D4539A600469729 /* JCOWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22B61D4539A600469729 /* JCOWalletTests.m */; };
 		14654AE51D44D26F00D8FC5D /* JCOBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14654AE41D44D26F00D8FC5D /* JCOBrokerTests.m */; };
 		14654AE81D44D6E700D8FC5D /* JCOBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 14654AE71D44D6E700D8FC5D /* JCOBroker.m */; };
 		14654AE91D44D6E700D8FC5D /* JCOBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 14654AE71D44D6E700D8FC5D /* JCOBroker.m */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		142B22B61D4539A600469729 /* JCOWalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCOWalletTests.m; sourceTree = "<group>"; };
 		14654AE11D43EA1A00D8FC5D /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14654AE21D43EA1A00D8FC5D /* WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14654AE31D43EA1A00D8FC5D /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 			children = (
 				14D891901D4140F7005E3584 /* JCOMoneyTest.m */,
 				14654AE41D44D26F00D8FC5D /* JCOBrokerTests.m */,
+				142B22B61D4539A600469729 /* JCOWalletTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				14D891BD1D43DD91005E3584 /* JCOMoneyTest.m in Sources */,
 				14654AE91D44D6E700D8FC5D /* JCOBroker.m in Sources */,
 				14654AE51D44D26F00D8FC5D /* JCOBrokerTests.m in Sources */,
+				142B22B71D4539A600469729 /* JCOWalletTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
