@@ -28,13 +28,13 @@
     [super tearDown];
 }
 
-/*
+
 
 //40€+40$ = 100$ 2:1
 -(void) testAddictionWithReduction{
     
     JCOBroker *broker = [JCOBroker new];
-    [broker addRate: 2 fromCurrency:@"USD" toCurrency:@"EUR"];
+    [broker addRate: 2 fromCurrency:@"EUR" toCurrency:@"USD"];
 
     JCOWallet *wallet = [[JCOWallet alloc] initWithAmount:40 currency:@"EUR"];
     [wallet plus: [JCOMoney dollarWithAmount:20]];
@@ -43,5 +43,5 @@
     
     XCTAssertEqualObjects(reduced, [JCOMoney dollarWithAmount:100], @"€40+ $40 = $100 2:1");
 }
-*/
+
 @end

@@ -43,4 +43,18 @@
     return self;
 }
 
+-(JCOMoney*) reduceToCurrency:(NSString *)currrency
+                      withBroker:(JCOBroker *)broker{
+    
+    JCOMoney *result = [[JCOMoney alloc]initWithAmount:0 currency:currrency];
+    
+    for (JCOMoney *each in self.moneys ) {
+        result = [result plus: [each reduceToCurrency:currrency withBroker:broker]];
+    }
+
+    return result;
+
+    
+}
+
 @end

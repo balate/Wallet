@@ -8,12 +8,14 @@
 
 #import "JCOMoney.h"
 #import "NSObject+GNUStepAddons.h"
+#import "JCOBroker.h"
 
 
 
 
 @interface JCOMoney ()
 @property (nonatomic, strong) NSNumber *amount;
+
 @end
 
 @implementation JCOMoney
@@ -60,6 +62,42 @@
     return total;
 }
 
+-(id<JCOMoney>) reduceToCurrency:(NSString*) currency
+                      withBroker:(JCOBroker*) broker{
+    
+    JCOMoney *result;
+    
+    double rate = [[broker.rates
+                    objectForKey:[broker keyForCurrency:self.currency
+                                             toCurrency:currency]]doubleValue];
+    
+    //comprobamos que divisa origen y destino son las mismas
+    if ([self.currency isEqual: currency]){
+        
+        result = self;
+        
+    }else if (rate == 0 ){
+        // No hay tasa de conversion, salta exception!!
+        [NSException raise:@"NoConversionRateException"
+                    format:@"Must have a conversion from %@ to %@", self.currency, currency];
+        
+        
+    }else {
+        
+        // Tenemos conversión
+       /* double rate = [[self.rates objectForKey:[self keyForCurrency:money.currency
+                                                          toCurrency:currency]] doubleValue];*/
+        
+        NSInteger  newAmount = [self.amount integerValue] *rate;
+        
+        result = [[JCOMoney alloc]
+                  initWithAmount:newAmount
+                  currency:currency];
+    
+}
+    return result;
+    
+}
 
 
 #pragma mark - Overwritten

@@ -12,10 +12,16 @@
 
 @interface JCOBroker : NSObject
 
--(id<JCOMoney>) reduce:(JCOMoney*) money toCurrency:(NSString *) currency;
+@property(nonatomic, strong) NSMutableDictionary *rates;
+
+-(JCOMoney*) reduce:(id<JCOMoney>) money toCurrency:(NSString *) currency;
 
 -(void) addRate:(NSInteger) rate
    fromCurrency:(NSString*) fromCurrency
      toCurrency:(NSString*) toCurrency;
+
+
+-(NSString *) keyForCurrency: (NSString *) fromCurrency
+                  toCurrency:(NSString *) toCurrency;
 
 @end

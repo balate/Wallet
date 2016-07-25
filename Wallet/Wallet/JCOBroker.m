@@ -11,7 +11,7 @@
 
 
 @interface JCOBroker()
-@property(nonatomic, strong) NSMutableDictionary *rates;
+
 @end
 
 @implementation JCOBroker
@@ -25,38 +25,11 @@
     return self;
 }
 
--(id<JCOMoney>) reduce:(JCOMoney*) money
+-(id<JCOMoney>) reduce:(id<JCOMoney>)money
           toCurrency:(NSString *) currency{
    
-    JCOMoney *result;
-    double rate = [[self.rates objectForKey:[self keyForCurrency:money.currency toCurrency:currency]]doubleValue];
-    
-    //comprobamos que divisa origen y destino son las mismas
-    if ([money.currency isEqual:currency]){
-    
-        result = money;
-    }else if (rate == 0 ){
-        // No hay tasa de conversion, salta exception!!
-        [NSException raise:@"NoConversionRateException"
-                    format:@"Must have a conversion from %@ to %@", money.currency, currency];
-
-    
-    }else {
-    
-        // Tenemos conversión
-        double rate = [[self.rates objectForKey:[self keyForCurrency:money.currency
-                                                          toCurrency:currency]] doubleValue];
-        
-        NSInteger  newAmount = [money.amount integerValue] *rate;
-        
-        result = [[JCOMoney alloc]
-                  initWithAmount:newAmount
-                        currency:currency];
-        
-        
-    }
-    return result;
-    
+   //double dispatch
+    return [money reduceToCurrency:currency withBroker:self];
 
     
 }

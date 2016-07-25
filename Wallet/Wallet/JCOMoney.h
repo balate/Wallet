@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class JCOMoney;
+@class JCOBroker;
 @protocol JCOMoney <NSObject>
 
 - (id) initWithAmount:(NSInteger) amount
@@ -16,6 +17,8 @@
 -(id<JCOMoney>) times:(NSInteger) multiplier;
 
 -(id<JCOMoney>) plus: (JCOMoney *) other;
+
+-(id<JCOMoney>) reduceToCurrency:(NSString*) currrency withBroker:(JCOBroker*) broker;
 
 @end
 
