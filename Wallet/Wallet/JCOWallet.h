@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "JCOMoney.h"
-@interface JCOWallet : NSObject<JCOMoney>
 
+@interface JCOWallet : NSObject<JCOMoney>
+@property (nonatomic, readonly) NSUInteger count;
 
 @end

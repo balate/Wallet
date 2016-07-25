@@ -15,6 +15,8 @@
 		142B22C61D46962C00469729 /* JCOSimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142B22C31D46962C00469729 /* JCOSimpleViewController.xib */; };
 		142B22C71D46962C00469729 /* JCOSimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142B22C31D46962C00469729 /* JCOSimpleViewController.xib */; };
 		142B22CA1D46968300469729 /* JCOControllersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22C91D46968300469729 /* JCOControllersTests.m */; };
+		142B22D11D46AF6000469729 /* JCOWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22D01D46AF6000469729 /* JCOWalletTableViewController.m */; };
+		142B22D21D46AF6000469729 /* JCOWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22D01D46AF6000469729 /* JCOWalletTableViewController.m */; };
 		14654AE51D44D26F00D8FC5D /* JCOBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14654AE41D44D26F00D8FC5D /* JCOBrokerTests.m */; };
 		14654AE81D44D6E700D8FC5D /* JCOBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 14654AE71D44D6E700D8FC5D /* JCOBroker.m */; };
 		14654AE91D44D6E700D8FC5D /* JCOBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 14654AE71D44D6E700D8FC5D /* JCOBroker.m */; };
@@ -54,6 +56,8 @@
 		142B22C21D46962C00469729 /* JCOSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCOSimpleViewController.m; sourceTree = "<group>"; };
 		142B22C31D46962C00469729 /* JCOSimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCOSimpleViewController.xib; sourceTree = "<group>"; };
 		142B22C91D46968300469729 /* JCOControllersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCOControllersTests.m; sourceTree = "<group>"; };
+		142B22CF1D46AF6000469729 /* JCOWalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCOWalletTableViewController.h; sourceTree = "<group>"; };
+		142B22D01D46AF6000469729 /* JCOWalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCOWalletTableViewController.m; sourceTree = "<group>"; };
 		14654AE11D43EA1A00D8FC5D /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14654AE21D43EA1A00D8FC5D /* WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14654AE31D43EA1A00D8FC5D /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +112,8 @@
 				142B22C11D46962C00469729 /* JCOSimpleViewController.h */,
 				142B22C21D46962C00469729 /* JCOSimpleViewController.m */,
 				142B22C31D46962C00469729 /* JCOSimpleViewController.xib */,
+				142B22CF1D46AF6000469729 /* JCOWalletTableViewController.h */,
+				142B22D01D46AF6000469729 /* JCOWalletTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 				147A8B761D395A9D00F2B6D1 /* ViewController.m in Sources */,
 				142B22C41D46962C00469729 /* JCOSimpleViewController.m in Sources */,
 				14654AE81D44D6E700D8FC5D /* JCOBroker.m in Sources */,
+				142B22D11D46AF6000469729 /* JCOWalletTableViewController.m in Sources */,
 				147A8B731D395A9D00F2B6D1 /* AppDelegate.m in Sources */,
 				142B22BA1D453D1100469729 /* JCOWallet.m in Sources */,
 				14D8918F1D413347005E3584 /* NSObject+GNUStepAddons.m in Sources */,
@@ -362,6 +369,7 @@
 				14654AE91D44D6E700D8FC5D /* JCOBroker.m in Sources */,
 				142B22CA1D46968300469729 /* JCOControllersTests.m in Sources */,
 				142B22C51D46962C00469729 /* JCOSimpleViewController.m in Sources */,
+				142B22D21D46AF6000469729 /* JCOWalletTableViewController.m in Sources */,
 				14654AE51D44D26F00D8FC5D /* JCOBrokerTests.m in Sources */,
 				142B22B71D4539A600469729 /* JCOWalletTests.m in Sources */,
 			);
