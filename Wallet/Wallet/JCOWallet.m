@@ -6,6 +6,7 @@
 //  Copyright © 2016 Ocon. All rights reserved.
 //
 
+ @import UIKit;
 #import "JCOWallet.h"
 
 @interface JCOWallet()
@@ -60,6 +61,20 @@
     return result;
 
     
+}
+
+#pragma mark - Notifications
+-(void) subscribeToMemoryWarning: (NSNotificationCenter *) nc{
+
+
+    [nc addObserver:self
+           selector:@selector(dumpToDisk:)
+               name:UIApplicationDidReceiveMemoryWarningNotification
+             object:nil];
+}
+-(void) dumpToDisk:(NSNotification *) notification{
+
+    //guarda las cosas de disco
 }
 
 @end

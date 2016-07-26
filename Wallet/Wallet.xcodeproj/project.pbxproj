@@ -17,6 +17,9 @@
 		142B22CA1D46968300469729 /* JCOControllersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22C91D46968300469729 /* JCOControllersTests.m */; };
 		142B22D11D46AF6000469729 /* JCOWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22D01D46AF6000469729 /* JCOWalletTableViewController.m */; };
 		142B22D21D46AF6000469729 /* JCOWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22D01D46AF6000469729 /* JCOWalletTableViewController.m */; };
+		142B22D51D47DAD000469729 /* JCONotificationCenterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22D41D47DAD000469729 /* JCONotificationCenterTest.m */; };
+		142B22D81D47DE3C00469729 /* JCOFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22D71D47DE3C00469729 /* JCOFakeNotificationCenter.m */; };
+		142B22D91D47DE3C00469729 /* JCOFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 142B22D71D47DE3C00469729 /* JCOFakeNotificationCenter.m */; };
 		14654AE51D44D26F00D8FC5D /* JCOBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14654AE41D44D26F00D8FC5D /* JCOBrokerTests.m */; };
 		14654AE81D44D6E700D8FC5D /* JCOBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 14654AE71D44D6E700D8FC5D /* JCOBroker.m */; };
 		14654AE91D44D6E700D8FC5D /* JCOBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 14654AE71D44D6E700D8FC5D /* JCOBroker.m */; };
@@ -58,6 +61,9 @@
 		142B22C91D46968300469729 /* JCOControllersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCOControllersTests.m; sourceTree = "<group>"; };
 		142B22CF1D46AF6000469729 /* JCOWalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCOWalletTableViewController.h; sourceTree = "<group>"; };
 		142B22D01D46AF6000469729 /* JCOWalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCOWalletTableViewController.m; sourceTree = "<group>"; };
+		142B22D41D47DAD000469729 /* JCONotificationCenterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCONotificationCenterTest.m; sourceTree = "<group>"; };
+		142B22D61D47DE3C00469729 /* JCOFakeNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCOFakeNotificationCenter.h; sourceTree = "<group>"; };
+		142B22D71D47DE3C00469729 /* JCOFakeNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCOFakeNotificationCenter.m; sourceTree = "<group>"; };
 		14654AE11D43EA1A00D8FC5D /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14654AE21D43EA1A00D8FC5D /* WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14654AE31D43EA1A00D8FC5D /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +132,16 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		142B22D31D47DA8E00469729 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				142B22D41D47DAD000469729 /* JCONotificationCenterTest.m */,
+				142B22D61D47DE3C00469729 /* JCOFakeNotificationCenter.h */,
+				142B22D71D47DE3C00469729 /* JCOFakeNotificationCenter.m */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
 		147A8B621D395A9D00F2B6D1 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +183,7 @@
 		147A8B981D395C0500F2B6D1 /* WalletTests */ = {
 			isa = PBXGroup;
 			children = (
+				142B22D31D47DA8E00469729 /* Singletons */,
 				142B22C81D46965500469729 /* Controllers */,
 				147A8BA11D395CED00F2B6D1 /* Models */,
 				147A8B9B1D395C0500F2B6D1 /* Info.plist */,
@@ -346,6 +363,7 @@
 				14654AE81D44D6E700D8FC5D /* JCOBroker.m in Sources */,
 				142B22D11D46AF6000469729 /* JCOWalletTableViewController.m in Sources */,
 				147A8B731D395A9D00F2B6D1 /* AppDelegate.m in Sources */,
+				142B22D81D47DE3C00469729 /* JCOFakeNotificationCenter.m in Sources */,
 				142B22BA1D453D1100469729 /* JCOWallet.m in Sources */,
 				14D8918F1D413347005E3584 /* NSObject+GNUStepAddons.m in Sources */,
 				14D8918B1D412DEF005E3584 /* JCOMoney.m in Sources */,
@@ -369,9 +387,11 @@
 				14654AE91D44D6E700D8FC5D /* JCOBroker.m in Sources */,
 				142B22CA1D46968300469729 /* JCOControllersTests.m in Sources */,
 				142B22C51D46962C00469729 /* JCOSimpleViewController.m in Sources */,
+				142B22D91D47DE3C00469729 /* JCOFakeNotificationCenter.m in Sources */,
 				142B22D21D46AF6000469729 /* JCOWalletTableViewController.m in Sources */,
 				14654AE51D44D26F00D8FC5D /* JCOBrokerTests.m in Sources */,
 				142B22B71D4539A600469729 /* JCOWalletTests.m in Sources */,
+				142B22D51D47DAD000469729 /* JCONotificationCenterTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

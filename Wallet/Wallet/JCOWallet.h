@@ -12,4 +12,6 @@
 @interface JCOWallet : NSObject<JCOMoney>
 @property (nonatomic, readonly) NSUInteger count;
 
+-(void) subscribeToMemoryWarning: (NSNotificationCenter *) nc;
+
 @end
