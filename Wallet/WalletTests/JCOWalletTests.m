@@ -35,7 +35,7 @@
     
     JCOBroker *broker = [JCOBroker new];
     [broker addRate: 2 fromCurrency:@"EUR" toCurrency:@"USD"];
-
+    
     JCOWallet *wallet = [[JCOWallet alloc] initWithAmount:40 currency:@"EUR"];
     [wallet plus: [JCOMoney dollarWithAmount:20]];
     

@@ -49,11 +49,36 @@
 }
 
 
+
 #pragma mark -utils
 -(NSString *) keyForCurrency: (NSString *) fromCurrency
                   toCurrency:(NSString *) toCurrency{
 
     return [NSString stringWithFormat:@"%@-%@", fromCurrency, toCurrency];
+}
+
+
+
+#pragma mark -Rates
+-(void)parseJSONRates:(NSData *) json{
+    
+    NSError *err = nil;
+
+    id obj = [NSJSONSerialization
+              JSONObjectWithData: json
+              options:  NSJSONReadingAllowFragments
+              error: &err];
+    
+    if(obj != nil){
+    
+        // Pillamos los rates y los vamos añadiendo al broker
+        
+    }else{
+        
+        // No se recibe nada....
+        [NSException raise:@"NoRatesInJSONException"
+                    format:@"JSON must carry some data!"];
+    }
 }
 
 
